@@ -24,26 +24,44 @@ public class Bombilla {
         }
     }
     
+    /**
+     * Devuelve el nombre de dónde está la bombilla
+     */
     public String queBombillaEs() {
         return parteDeLaCasa;
     }
     
+    /**
+     * Devuelve la aberración que se ha gastado con la bombilla encendida
+     */
     public double cuantoHaGastado() {
         return kilovatiosGastados;
     }
     
+    /**
+     * ¿Está apagada o encendida? ¡Asegúrate!
+     */
     public boolean estaEncendida() {
         return encendida;
     }
     
+    /**
+     * Cambia la bombilla de lugar
+     */
     public void setNombre(String nuevoNombre) {
         parteDeLaCasa = nuevoNombre;
     }
     
+    /**
+     * Modifica el contador que con esta factura no llegas a fin de mes
+     */
     public void alterarContador(double nuevoContador) {
         kilovatiosGastados = nuevoContador;
     }
     
+    /**
+     * Apágala o enciéndela, pero sobre todo apágala
+     */
     public void encenderOApagar() {
         if(encendida == true) {
             encendida = false;
@@ -54,6 +72,9 @@ public class Bombilla {
         }
     }
     
+    /**
+     * Imprime todo los datos que necesitas saber
+     */
     public void imprimeDetalles() {
         String respuesta = null;
         if(encendida == true){
@@ -65,6 +86,9 @@ public class Bombilla {
         System.out.println("Parte de la casa: " + parteDeLaCasa + " | Cuánto lleva gastado: " + kilovatiosGastados + " | Encendido: " + respuesta);
     }
     
+    /**
+     * Lo mismo que lo que imprime, pero en un String
+     */
     public String estadoDelObjeto() {
         String respuesta = null;
         if(encendida == true){
@@ -74,6 +98,6 @@ public class Bombilla {
             respuesta = "no";
         }
         String estado = "Parte de la casa: " + parteDeLaCasa + " | Cuánto lleva gastado: " + kilovatiosGastados + " | Encendido: " + respuesta;
-        return respuesta;
+        return estado;
     }
 }
