@@ -58,8 +58,7 @@ public class Bombilla {
     /**
      * Modifica el contador que con esta factura no llegas a fin de mes
      */
-    public void alterarContador() {
-        double nuevaTasa = 10.0012;
+    public void alterarContador(double nuevaTasa) {
         kilovatiosGastados = nuevaTasa * 3;
     }
     
