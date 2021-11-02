@@ -22,6 +22,9 @@ public class Bombilla {
         if(encendida == true) {
             kilovatiosGastados = 15.423;
         }
+        else {
+            kilovatiosGastados = 0;
+        }
     }
     
     /**
@@ -55,8 +58,9 @@ public class Bombilla {
     /**
      * Modifica el contador que con esta factura no llegas a fin de mes
      */
-    public void alterarContador(double nuevoContador) {
-        kilovatiosGastados = nuevoContador;
+    public void alterarContador() {
+        double nuevaTasa = 10.0012;
+        kilovatiosGastados = nuevaTasa * 3;
     }
     
     /**
